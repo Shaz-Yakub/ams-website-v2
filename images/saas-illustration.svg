@@ -1,0 +1,17 @@
+<svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <style>
+        .primary { fill: #2196f3; }
+        .secondary { fill: #1976d2; }
+        .accent { fill: #ffffff; opacity: 0.1; }
+    </style>
+    <!-- Abstract tech shapes -->
+    <path class="primary" d="M100 20C120 20 140 40 140 60C140 80 120 100 100 100C80 100 60 80 60 60C60 40 80 20 100 20Z"/>
+    <path class="secondary" d="M160 80C180 80 200 100 200 120C200 140 180 160 160 160C140 160 120 140 120 120C120 100 140 80 160 80Z"/>
+    <path class="accent" d="M40 100C60 100 80 120 80 140C80 160 60 180 40 180C20 180 0 160 0 140C0 120 20 100 40 100Z"/>
+    <!-- Connection lines -->
+    <path stroke="#2196f3" stroke-width="2" d="M100 100L160 120M100 100L80 140" stroke-dasharray="4 4"/>
+    <!-- Small decorative circles -->
+    <circle cx="100" cy="100" r="5" class="primary"/>
+    <circle cx="160" cy="120" r="5" class="secondary"/>
+    <circle cx="80" cy="140" r="5" class="accent"/>
+</svg> 
