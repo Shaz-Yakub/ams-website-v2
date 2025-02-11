@@ -37,12 +37,14 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: fixed;
+
     width: 100%;
     top: 0;
     z-index: 1000;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(5px);
+    min-height: 40px;  /* Ensure navbar has enough height */
+    overflow: visible;  /* Ensure overflow is visible */
 }
 
 /* Add a container for the navbar content */
@@ -53,7 +55,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 8rem;
+    padding: 0 8rem;  /* Adjust padding if necessary */
 }
 
 .logo {
@@ -66,6 +68,14 @@ body {
 
 .logo:hover {
     color: var(--accent-color);
+}
+
+.navbar .logo img {
+    height: 120px;  
+    width: auto;   
+    display: block; 
+    z-index: 10;  
+    position: relative;  
 }
 
 .nav-links {
@@ -87,7 +97,7 @@ body {
 
 .hero {
     position: relative;
-    min-height: 65vh;
+    min-height: 90vh;  /* Increased from 65vh to 80vh */
     display: flex;
     align-items: center;
     padding: 2rem;
@@ -118,6 +128,7 @@ body {
     margin: 0 auto;
     text-align: left;
     padding: 0 2rem;
+    margin-top: 20px;  /* Add margin to move text down */
     will-change: transform, opacity;  /* Optimize content animations */
 }
 
@@ -372,30 +383,41 @@ body {
 /* Add footer styles */
 footer {
     background-color: #121212;  /* Changed to black */
-    padding: 1.5rem 0;  /* Keep the existing padding */
+    padding: 1rem 0;  /* Keep the existing padding */
     text-align: center;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(5px);
 }
 
 .footer-content {
-    max-width: 1400px;
-    margin: 0 auto;
-    text-align: center;  /* Center the text */
-    padding: 0 2rem;
     display: flex;
-    flex-direction: column;  /* Stack items vertically */
-    align-items: center;  /* Center items */
-    gap: 1.5rem;  /* Adjust gap if needed */
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 1rem;
+    background-color: #121212;  /* Background color for footer */
+}
+
+.footer-section {
+    flex: 1;  /* Each section takes equal space */
+    color: var(--primary-text);
+}
+
+.vertical-divider {
+    width: 2px;  /* Width of the vertical divider */
+    background-color: var(--royal-blue);  /* Change color to royal blue */
+    height: 100%;  /* Set height to 100% to fill the footer */
+    margin: 0 1rem;  /* Space around the divider */
+    display: inline-block;  /* Ensure it behaves like a block element */
 }
 
 .contact-info {
     display: flex;  /* Use flexbox for alignment */
-    justify-content: center;  /* Center items */
+    justify-content: left;  /* Left-align items */
     align-items: center;  /* Align items vertically */
-    gap: 2rem;  /* Space between items */
+    gap: 1rem;  /* Space between items */
     flex-wrap: wrap;  /* Allow wrapping if needed */
-    text-align: center;  /* Center text */
+    text-align: left;  /* Left-align text */
+    padding: 1.5rem 1rem;  /* Add padding to top/bottom and left/right */
 }
 
 .contact-info p {
@@ -445,6 +467,11 @@ footer {
     text-align: center;
 }
 
+.address-section {
+    text-align: left;  /* Left-align text in the address section */
+    padding: 1.5rem 1rem;  /* Add padding to top/bottom and left/right */
+}
+
 /* Update mobile styles */
 @media (max-width: 768px) {
     .footer-content {
@@ -462,7 +489,7 @@ footer {
 }
 
 .expertise {
-    padding: 6rem 2rem;
+    padding: 1rem 2rem;
     background-color: var(--primary-bg);  /* Set background to primary color */
 }
 
@@ -476,6 +503,7 @@ footer {
 
 .expertise-text {
     flex: 1;
+    padding: 2rem;  /* Add padding to all text */
 }
 
 .expertise-text h2 {
@@ -643,3 +671,14 @@ footer {
 h2 {
     color: var(--royal-blue);  /* Set all h2 titles to royal blue */
 }
+
+.footer-bottom {
+    text-align: center;  /* Center the text */
+    padding: 1rem 0;  /* Add some padding */
+    color: var(--secondary-text);  /* Use a lighter color for contrast */
+    background-color: #121212;  /* Match the footer background */
+    font-size: 0.8rem;  /* Set a smaller font size */
+}
+
+
+
