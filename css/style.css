@@ -384,7 +384,6 @@ body {
 footer {
     background-color: #121212;  /* Changed to black */
     padding: 1rem 0;  /* Keep the existing padding */
-    text-align: center;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(5px);
 }
@@ -392,9 +391,10 @@ footer {
 .footer-content {
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: center;  /* Center items vertically */
     padding: 1rem;
     background-color: #121212;  /* Background color for footer */
+    text-align: center;
 }
 
 .footer-section {
@@ -411,21 +411,10 @@ footer {
 }
 
 .contact-info {
-    display: flex;  /* Use flexbox for alignment */
-    justify-content: left;  /* Left-align items */
-    align-items: center;  /* Align items vertically */
-    gap: 1rem;  /* Space between items */
-    flex-wrap: wrap;  /* Allow wrapping if needed */
-    text-align: left;  /* Left-align text */
     padding: 1.5rem 1rem;  /* Add padding to top/bottom and left/right */
 }
 
-.contact-info p {
-    margin: 0;  /* Remove default margin */
-    display: flex;  /* Use flexbox for alignment */
-    align-items: center;  /* Center items vertically */
-    gap: 0.1rem;  /* Decrease space between icon and text further */
-}
+
 
 .contact-image {
     flex: 1.5;  /* Increased from 1 to 1.5 to make it wider */
@@ -468,15 +457,18 @@ footer {
 }
 
 .address-section {
-    text-align: left;  /* Left-align text in the address section */
     padding: 1.5rem 1rem;  /* Add padding to top/bottom and left/right */
 }
 
 /* Update mobile styles */
 @media (max-width: 768px) {
     .footer-content {
-        flex-direction: column;
-        gap: 2rem;
+        flex-direction: column;  /* Stack sections vertically */
+        align-items: center;  /* Center items horizontally */
+    }
+
+    .vertical-divider {
+        display: none;  /* Hide dividers in mobile view */
     }
 
     .contact-image {
