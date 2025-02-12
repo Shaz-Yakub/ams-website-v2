@@ -391,10 +391,10 @@ footer {
 .footer-content {
     display: flex;
     justify-content: space-between;
-    align-items: center;  /* Center items vertically */
     padding: 1rem;
+    padding-left: 25%;
+    padding-right: 20%;
     background-color: #121212;  /* Background color for footer */
-    text-align: center;
 }
 
 .footer-section {
@@ -626,39 +626,29 @@ footer {
     display: none;
 }
 
-.logos-section.transparent {
+.logos-section {
     margin-top: 2rem;
     padding: 2.5rem;
     display: flex;
-    justify-content: center;
+    justify-content: center;  /* Center logos horizontally */
     align-items: center;
-    flex-wrap: nowrap;
-    gap: 4rem;
-    background: rgba(255, 255, 255, 0.1);
+    flex-wrap: nowrap;  /* Prevent wrapping */
+    gap: 2rem;  /* Space between logos */
+    background: rgba(255, 255, 255, 0.1);  /* Keep the background transparent */
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 8px;
-    max-width: 1800px;
-    margin-left: auto;
-    margin-right: auto;
-    overflow-x: auto;
+    max-width: 80%;  /* Set a narrower width */
+    margin-left: auto;  /* Center the section */
+    margin-right: auto;  /* Center the section */
+    overflow-x: auto;  /* Allow horizontal scrolling */
+    scroll-snap-type: x mandatory;  /* Optional: for smooth scrolling */
 }
 
-.logos-section.transparent img {
-    width: 260px;
-    height: 110px;
-    object-fit: contain;
-    filter: none;
-    opacity: 0;
-    transition: all 0.3s ease;
-    background: rgba(255, 255, 255, 0.2);
-    padding: 1.5rem;
-    border-radius: 8px;
-    flex-shrink: 0;
+.logos-section img {
+    width: 200px;  /* Set a fixed width for logos */
+    height: auto;  /* Maintain aspect ratio */
+    flex-shrink: 0;  /* Prevent logos from shrinking */
 }
-
-/* Remove the individual animation delays since they'll be handled by JS */
-/* .logos-section.transparent img:nth-child(1) { animation-delay: 0.1s; } */
-/* ... */
 
 h2 {
     color: var(--royal-blue);  /* Set all h2 titles to royal blue */
@@ -670,6 +660,19 @@ h2 {
     color: var(--secondary-text);  /* Use a lighter color for contrast */
     background-color: #121212;  /* Match the footer background */
     font-size: 0.8rem;  /* Set a smaller font size */
+}
+
+/* Media query for mobile view */
+@media (max-width: 768px) {
+    .logos-section {
+        justify-content: flex-start;  /* Left-align logos in mobile view */
+        padding: 1rem;  /* Adjust padding for mobile */
+        gap: 1rem;  /* Reduce gap between logos */
+    }
+
+    .logos-section img {
+        width: 150px;  /* Optionally reduce logo size for mobile */
+    }
 }
 
 
