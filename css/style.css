@@ -533,14 +533,10 @@ footer {
 .expertise-image {
     flex: 1;
     position: relative;
-    opacity: 0;
-    transition: opacity 0.3s ease;  /* Smooth opacity transition */
+    overflow: hidden;  /* Hide overflow for smooth transition */
 }
 
-/* Add the animation when in view class is added */
-.expertise-image.in-view {
-    animation: slideInFromRight 1s ease-out forwards;
-}
+
 
 .expertise-image img {
     width: 100%;
@@ -673,6 +669,12 @@ h2 {
     .logos-section img {
         width: 150px;  /* Optionally reduce logo size for mobile */
     }
+}
+
+.secondary-bg {
+    background-color: var(--secondary-bg);  /* Use the secondary background color */
+    padding: 2rem;  /* Optional: Add padding for spacing */
+    border-radius: 8px;  /* Optional: Add border radius for rounded corners */
 }
 
 
